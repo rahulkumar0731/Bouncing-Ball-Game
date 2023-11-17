@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "apple_backend": {
+      "main": "src/apple_backend/main.mo",
+      "type": "motoko"
+    },
+    "apple_frontend": {
+      "dependencies": [
+        "apple_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/apple_frontend/src/index.html"
+      },
+      "source": [
+        "src/apple_frontend/assets",
+        "dist/apple_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
